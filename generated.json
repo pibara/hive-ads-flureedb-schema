@@ -1,0 +1,741 @@
+[
+    {
+        "_id": "_auth",
+        "doc": "pibarabot:owner",
+        "id": "TexH7Speh1vyoMdoQTPA1FtCBvq4saDxs85",
+        "roles": []
+    },
+    {
+        "_id": "_auth",
+        "doc": "pibarabot:active",
+        "id": "Tf9Yy1f5yWq1VwHyZfLnFtPMzW6GWiPEFpo",
+        "roles": [
+            [
+                "_role/name",
+                "advertisingBot"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "pibarabot:posting",
+        "id": "Tf7s3kiNYbGmhatPrx2djUgz8iJ2orkU18z",
+        "roles": []
+    },
+    {
+        "_id": "_auth",
+        "doc": "pibarabank:owner",
+        "id": "TfE7EhKetrH2NdjJNqA5t7zt5byfS6TuWbH",
+        "roles": []
+    },
+    {
+        "_id": "_auth",
+        "doc": "pibarabank:active",
+        "id": "TfCuxusnWMPQpLDADyWYtmaidBpg6TCxkmD",
+        "roles": [
+            [
+                "_role/name",
+                "advertisingBot"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "pibarabank:posting",
+        "id": "TfCS558rowdfp15s7692kR2PrM7G2MCofAv",
+        "roles": []
+    },
+    {
+        "_id": "_auth",
+        "doc": "themarkymark:owner",
+        "id": "TfHzR78Q9uji1vctiWJCX8Mw9rX8MpN5NPu",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "themarkymark:active",
+        "id": "TexVjqhL5rT1Fdy9gAbfNBWmSygNC2kzaCc",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "themarkymark:posting",
+        "id": "TfHeFDUJFvk2yPa4s6LRvXzqgnRrVEDoFe6",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "followbtcnews:owner",
+        "id": "Tf8hYyze6dhFbBoZGe6wF23WVxmytJCEddi",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "followbtcnews:active",
+        "id": "TfGReUdPoU5UJ5D9JkANfDUiE6nJLfuFJdm",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "followbtcnews:posting",
+        "id": "TfDRGo9rPotFe9LBSoRaMNWQkFwwzV4jD1x",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "abit:owner",
+        "id": "Tf3xXBmoyb9pvjKy7KJoUUzh6nVzALAudUu",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "abit:active",
+        "id": "TfKuYwBdWhoRWRkoViCWnh2bMeSzauuYZQn",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "abit:posting",
+        "id": "Tey3MwaVLSu2Mg7K3J3ccv7UPbCvLcCtfmg",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "yabapmatt:owner",
+        "id": "TfBc18xA1w8GMFdkrfbNtQaXdEajcRZpKuH",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "yabapmatt:active",
+        "id": "TexrLEyDkA9g1kPrKfakifvURJy1cYHTBMz",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "yabapmatt:posting",
+        "id": "Tf7AyGijzGkq3kjK3b4R611LPo5TUZnyYZy",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "blocktrades:owner",
+        "id": "Tf8twdvhY8ScRCZ3HEGVm5sxSgtsmZ1LeDn",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "blocktrades:active",
+        "id": "TfGmxcrDgvBSHPi1We1DokJnd9h9ZRWaZaS",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "blocktrades:posting",
+        "id": "TfBahiNzE617bNEKtSc9utgKD7bmjodejYV",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "gtg:owner",
+        "id": "TfJ1mPakrQbfGXCGphHGcg2PwMzyXuZW1e2",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "gtg:active",
+        "id": "Tf3VUc3TNwXPSLfLD6cPMVevdotBWru3u8k",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "gtg:posting",
+        "id": "TfEX5cE9HgJvJstD8f1VzQXXmKpvS3T4mha",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "anyx:owner",
+        "id": "TewZofALxTHZEYzHzwTmHKYDTMMc8XLFiRB",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "anyx:active",
+        "id": "TfEzghoZE4E7fMEhMUJNigarvsXhaMvTL4c",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "anyx:posting",
+        "id": "Tf3a2rZrhdh8ywyX4mxmaMmYMWCxDZPyyua",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "pharesim:owner",
+        "id": "TexHyqRp8RA9XbawewM6eJho1RDFHn1p9Nd",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "pharesim:active",
+        "id": "Tf1c3ZME9gtseCxbKo2HPDBXowUzzSYzuRd",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "pharesim:posting",
+        "id": "TfAJq69Tx8jdVpCzx2MkC5DmQMwyGgg5vBp",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "steempress:owner",
+        "id": "TfEPqvHCp9u97DvDeXJnPqAknbDAEC3UXRi",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "steempress:active",
+        "id": "Tf9qVDCYwuimPAkpNJM8Vua6UoobrY9FYF5",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "steempress:posting",
+        "id": "Tf9eq2EtNaj2DAnH9K8aQimE4KXSocxRfDw",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "aggroed:owner",
+        "id": "TfHmZohLpqxARoDBJ8n3mJFnTott5J3b5Xd",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "aggroed:active",
+        "id": "TfG1R4XZn9rpQkqiWoejn6a5mZYHE7xNEda",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "aggroed:posting",
+        "id": "Texd8Pn43aQXBrym12sbY49jHmML59bz8rr",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "stoodkev:owner",
+        "id": "TfDaj8bBdyg9TRPTKM1YjoH6bowLkYNjQpj",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "stoodkev:active",
+        "id": "TfCPev8jDBDj2istLctVeW2jxDRrcm6APpC",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "stoodkev:posting",
+        "id": "Tf5jo5Ay2iNrDCGqrfvUASCkoTW9E9Vng37",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "roelandp:owner",
+        "id": "TfH9FaWFBi5KP9zu9f33kbP147yBEgRwRZ7",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "roelandp:active",
+        "id": "TfKapcJKDfSFqbEPeZH2dfwWDwgW2t2mCxE",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "roelandp:posting",
+        "id": "TfJYKK41fcaRKWVQDZvffr3iN7JrX6ju2a5",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "ocd-witness:owner",
+        "id": "TfEHQatb7yJW13GcTkuA52ya3RLkisQM5Yt",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "ocd-witness:active",
+        "id": "Tf6fhuV7oXE63EHgdBpSbMud92CVWyRWuh8",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "ocd-witness:posting",
+        "id": "Tf8pPdHwdNseMfZjrpXMHVydvC58wnsGxiQ",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "therealwolf:owner",
+        "id": "TfEuoyqsjDtP7yT6nZoZ39e8uzw539Ps5PF",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "therealwolf:active",
+        "id": "TfCCaueYo8LkT4Yy9FLEWj7qrzfKYZJuDVE",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "therealwolf:posting",
+        "id": "Tezr9E7eGE1hZ8CDcDgT1sNSkqkYqZsJatX",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "ausbitbank:owner",
+        "id": "Tf1vRa5BMvSpsNjKenD7pri3nCpBVW4jXPZ",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "ausbitbank:active",
+        "id": "Tf73LnigNFQtdp3LetJBgZjFr6BvV79So3Z",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "ausbitbank:posting",
+        "id": "TfHK1aKGFynJM5pA2U9nr9PxgLkRkNVo86H",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "emrebeyler:owner",
+        "id": "Tf8gtFjKeA4wbX6ELPB2j6yWhmYQXkS1y6L",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "emrebeyler:active",
+        "id": "Tf6Zy79zdMvydFr6f9WY1p3t3vRzCnWWoH9",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "emrebeyler:posting",
+        "id": "TfANF145tQk82xNJujc8YfN5tGfAnYrc32P",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "someguy123:owner",
+        "id": "TfHdLRDX3igpVHz7FGuiVc4SrVRhHgg3sxd",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "someguy123:active",
+        "id": "TewdsHen3SeQPVNYbJxn9bRWs15PiB9cWGA",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "someguy123:posting",
+        "id": "TeyYN1cM4pdoMtgtFpRfoy24QnfMo8e6RDf",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "cervantes:owner",
+        "id": "TfJXpkyp6ztnL6mATezqkDaxLzmtz91KvR6",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "cervantes:active",
+        "id": "TfBXkdALadJAy8BWEumUsADT427bdPukPav",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "cervantes:posting",
+        "id": "Tf43ZTRRWvG878RsGvbsz1DPXwJNMKaWaYC",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "arcange:owner",
+        "id": "Tf5TEqoUiJ9f2gu6hFUZ7T9k7dxAwU92q3t",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "arcange:active",
+        "id": "TfEgtUiZjwdW64NsEbyZuX5WCTwhrJtCosU",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "arcange:posting",
+        "id": "Tewq8ZLumFVA5dmPefqwwfZtJqsbJcHUCJ5",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "good-karma:owner",
+        "id": "TeyBdUrobGGm7yDU5RmwBpkX8F8GFWpUZob",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "good-karma:active",
+        "id": "TfDYLJRGCvcFdVCX2DfABMsGoJcpuTSxVNB",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "good-karma:posting",
+        "id": "TfLqhEfGVKGFYnZRXCMxRCJWAAyfoviDKpb",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "steempeak:owner",
+        "id": "Tf7axZ3qhuQLRK4niWdhNR7VjtVt1VYF1Hc",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessowner"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "steempeak:active",
+        "id": "Tf8UbtQB3UwQirjkekHxV65LRDjzJRYL7Zw",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessactive"
+            ]
+        ]
+    },
+    {
+        "_id": "_auth",
+        "doc": "steempeak:posting",
+        "id": "TfHfipWJFzpp6fUzdp9f4wu7bEga8VpSm1F",
+        "roles": [
+            [
+                "_role/name",
+                "Witnessposting"
+            ]
+        ]
+    }
+]
