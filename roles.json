@@ -1,0 +1,74 @@
+[
+    {
+        "_id": "_role",
+        "doc": "HIVE-user posting role",
+        "rules": [
+            ["_rule/id", "root"]
+        ],
+        "id": "hive_user_role"
+    },
+    {
+        "_id": "_role",
+        "doc": "HIVE-user active role",
+        "rules": [
+            ["_rule/id", "root"]
+        ],
+        "id": "hive_user_active_role"
+    },
+    {
+        "_id": "_role",
+        "doc": "HIVE-user owner role",
+        "rules": [
+            ["_rule/id", "root"]
+        ],
+        "id": "hive_user_owner_role"
+    },
+    {
+        "_id": "_role",
+        "doc": "HIVE-witness posting role",
+        "rules": [
+            ["_rule/id", "root"]
+        ],
+        "id": "hive_witness_role"
+    },
+    {
+        "_id": "_role",
+        "doc": "HIVE-witness active role",
+        "rules": [
+            ["_rule/id", "root"]
+        ],
+        "id": "hive_witness_active_role"
+    },
+    {
+        "_id": "_role",
+        "doc": "HIVE-witness owner role",
+        "rules": [
+            ["_rule/id", "root"]
+        ],
+        "id": "hive_witness_owner_role"
+    },
+    {
+        "_id": "_role",
+        "doc": "Side-chain script role",
+        "rules": [
+            ["_rule/id", "root"]
+        ],
+        "id": "sidechain_filler"
+    },
+    {
+        "_id": "_role",
+        "doc": "HIVE-advertising bot role",
+        "rules": [
+            ["_rule/id", "root"]
+        ],
+        "id": "hive_ad_bot"
+    },
+    {
+        "_id": "_role",
+        "doc": "HIVE-advertising bank role",
+        "rules": [
+            ["_rule/id", "root"]
+        ],
+        "id": "sidechain_filler"
+    }
+]
