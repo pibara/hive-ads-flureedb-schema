@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import sys
 import json
 import time
 import hashlib
@@ -19,23 +20,93 @@ def hive_pubkey_to_fluree_address(ownerpubkey):
     keyid = base58.b58encode(core + h2.digest()[:4]).decode()
     return keyid
 
-def accounts_to_fluree_adresses(client, accounts):
+def accounts_to_fluree_adresses(client, accounts, update=False):
     accounts2 = client.get_accounts(accounts)
-    for record in accounts2:
-        account=record["name"]
-        print(" -", account)
-        for keytype in ["owner", "active", "posting"]:
-            if (keytype in record and
-               "key_auths" in record[keytype] and 
-               isinstance(record[keytype]["key_auths"], list) and 
-               record[keytype]["key_auths"] and 
-               isinstance(record[keytype]["key_auths"][0], list) and 
-               record[keytype]["key_auths"][0][0]):
-                pubkey = record[keytype]["key_auths"][0][0]
-                key_id =  hive_pubkey_to_fluree_address(pubkey)
-                print("    -", keytype,":", key_id)
+    if update:
+        for record in accounts2:
+            #FIXME: 
+            # * Delete all old _auth nodes
+            # * Add updated _auth nodes
+            pass
+    else:
+        for record in accounts2:
+            account=record["name"]
+            transaction = [
+                {
+                   "_id": "_user",
+                   "username": account,
+                   "doc": "Regular HIVE user",
+                   "auth": [],
+                   "roles": []
+                }
+            ]
+            for keytype in ["owner", "active", "posting"]:
+                if (keytype in record and
+                   "key_auths" in record[keytype] and 
+                   isinstance(record[keytype]["key_auths"], list) and 
+                   record[keytype]["key_auths"] and 
+                   isinstance(record[keytype]["key_auths"][0], list) and 
+                   record[keytype]["key_auths"][0][0]):
+                    pubkey = record[keytype]["key_auths"][0][0]
+                    key_id =  hive_pubkey_to_fluree_address(pubkey)
+                    if keytype == "posting":
+                        role = "hive_user_role"
+                    else:
+                        role = "hive_user_" + keytype + "_role"
+                    handle = "_auth$" + key_id
+                    operation = dict()
+                    operation["_id"] = handle
+                    operation["doc"] = keytype + "  auth @" + account
+                    if keytype == "posting":
+                        transaction[0]["roles"] = [["_role/id", role]]
+                    else:
+                        operation["roles"] = [["_role/id", role]]
+                    transaction[0]["auth"].append(handle)
+                    transaction.append(operation)
+            transaction.reverse()
+            print(json.dumps(transaction, indent=2, sort_keys=True))
+            print()
 
+
+account_reference_keys = [
+    "account",
+    "account_to_recover",
+    "agent",
+    "author",
+    "contributor",
+    "control_account",
+    "current_owner",
+    "creator",
+    "delegatee",
+    "delegator",
+    "from",
+    "from_account",
+    "new_account_name",
+    "open_owner",
+    "owner",
+    "parent_author",
+    "producer",
+    "proxy",
+    "publisher",
+    "receiver",
+    "recovery_account",
+    "required_auths",
+    "required_posting_auths",
+    "to",
+    "to_account",
+    "voter",
+    "witness"
+]
+account_changing_opps = {
+    "account_update": "account",
+    "recover_account": "account_to_recover"
+}
 client = Client()
+stats = client.get_dynamic_global_properties()
+for key in stats:
+    if "block" in key:
+        print(key,":",stats[key])
+sys.exit(0)
 oldblock = client.get_dynamic_global_properties()["last_irreversible_block_num"]
 accounts = set()
 while True:
@@ -43,49 +114,37 @@ while True:
     skipcount = 0
     newblock = client.get_dynamic_global_properties()["last_irreversible_block_num"]
     for no in range(oldblock, newblock+1):
-        print(no-oldblock+1 ,"/" ,newblock-oldblock+1)
-        accounts2 = list()
+        accounts2 = set()
+        accounts3 = set()
         block = client.get_block(no)
         for transaction in block["transactions"]:
             for operation in transaction["operations"]:
                 opp = operation[0]
-                found = False
-                for key in ["required_auths",
-                            "required_posting_auths",
-                            "parent_author",
-                            "author",
-                            "voter",
-                            "from",
-                            "to",
-                            "owner",
-                            "account",
-                            "publisher",
-                            "creator",
-                            "delegator",
-                            "delegatee"]:
+                for key in account_reference_keys:
                     if key in operation[1].keys():
                         val = operation[1][key]
                         if isinstance(val, list):
                             for v in val:
                                 if v and isinstance(v,str):
-                                    found=True
                                     if v not in accounts:
                                         count += 1
                                         accounts.add(v)
-                                        accounts2.append(v)
+                                        accounts2.add(v)
                                     else:
                                         skipcount += 1
                         else:
                             if val and isinstance(val,str):
-                                found=True
+                                if val in accounts and opp in account_changing_opps and account_changing_opps[opp] == key:
+                                    accounts3.add(val)
                                 if val not in accounts:
                                     count += 1
                                     accounts.add(val)
-                                    accounts2.append(val)
+                                    accounts2.add(val)
                                 else:
                                     skipcount += 1
         if accounts2:
-            accounts_to_fluree_adresses(client, accounts2)
-        print(" *", count,"/", count+skipcount, "/", len(accounts))
+            accounts_to_fluree_adresses(client, list(accounts2))
+        if accounts3:
+            accounts_to_fluree_adresses(client, list(accounts3), update=True)
     time.sleep(1)
     oldblock = newblock + 1

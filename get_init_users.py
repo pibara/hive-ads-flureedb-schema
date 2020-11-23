@@ -41,13 +41,51 @@ def account_to_fluree_adresses(client, account):
                     obj["roles"] = [["_role/name", "Witness" + keytype]]
             yield obj
 
+def process_account_record(account, record, keytype, role):
+    if (keytype in record and 
+       "key_auths" in record[keytype] and
+       isinstance(record[keytype]["key_auths"], list) and
+       record[keytype]["key_auths"] and
+       isinstance(record[keytype]["key_auths"][0], list) and
+       record[keytype]["key_auths"][0]):
+        pubkey = record[keytype]["key_auths"][0][0]
+        key_id =  hive_pubkey_to_fluree_address(pubkey)
+        yield [key_id, role]
+
+def accounts_to_fluree_adresses(client, faccounts, postrole, activerole, ownerrole):
+    accounts = client.get_accounts(faccounts)
+    for record in accounts:
+        account=record["name"]
+        rval = dict()
+        rval["account"] = account
+        rval["result"] = list()
+        if postrole:
+            for val in process_account_record(account, record, "posting", postrole):
+                rval["result"].append(val)
+        if activerole:
+            for val in process_account_record(account, record, "active", activerole):
+                rval["result"].append(val)
+        if ownerrole:
+            for val in process_account_record(account, record, "owner", ownerrole):
+                rval["result"].append(val)
+        yield rval
+
 transaction = []
 accounts = ["pibarabot", "pibarabank"]
 client = Client()
-for witness in client.get_active_witnesses():
-    accounts.append(witness)
-for account in accounts:
-    for obj in account_to_fluree_adresses(client, account):
-        transaction.append(obj)
+iblock = client.get_dynamic_global_properties()["last_irreversible_block_num"]
+witnesses = client.get_witnesses_by_vote("", 1000)
+non_dead_witnesses = set()
+for witness in witnesses:
+    if witness["votes"] and iblock - witness["last_confirmed_block_num"] < 200000:
+        non_dead_witnesses.add(witness["owner"])
+for result in accounts_to_fluree_adresses(client, list(non_dead_witnesses), "hive_witness_role", "hive_witness_active_role", "hive_witness_owner_role"):
+    print(result)
 
-print(json.dumps(transaction, indent=4, sort_keys=True))
+#for witness in client.get_active_witnesses():
+#    accounts.append(witness)
+#for account in accounts:
+#    for obj in account_to_fluree_adresses(client, account):
+#        transaction.append(obj)
+#
+#print(json.dumps(transaction, indent=4, sort_keys=True))
